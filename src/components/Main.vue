@@ -24,21 +24,30 @@ export default {
 
 <template>
 
-    <section v-show="store.active === 0">
-        <Home />
-    </section>
+    <main>
+        <section v-show="store.active === 0">
+            <Home />
+        </section>
 
-    <section v-show="store.active === 1">
-        <About />
-    </section>
+        <section v-show="store.active === 1">
+            <About />
+        </section>
 
-    <section v-show="store.active === 2">
-        <Cv />
-    </section>
+        <section v-show="store.active === 2">
+            <Cv />
+        </section>
+    </main>
     
 </template>
 
 <style lang="scss" scoped>
 @use "../style/general" as*;
+@use "../style/partials/variables" as*;
+
+main {
+    height: 100vh;
+    margin-top: 60px;
+    background-color: $background;
+}
 
 </style>

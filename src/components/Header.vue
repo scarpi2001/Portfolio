@@ -16,6 +16,9 @@ export default {
                 {
                     text: "CV",
                 },
+                {
+                    text: "Projects"
+                }
             ]
         }
     },
@@ -30,50 +33,56 @@ export default {
 
 <template>
 
-    <nav>
-        <ul>
-            <li v-for="(menuVoice, index) in menu" :key="index" @click="currentVoice(index)"
-                :class="{ selected: store.active === index }">
-                <span>
-                    {{ menuVoice.text }}
-                </span>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li v-for="(menuVoice, index) in menu" :key="index" @click="currentVoice(index)"
+                    :class="{ selected: store.active === index }">
+                    <span>
+                        {{ menuVoice.text }}
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 </template>
 
 <style lang="scss" scoped>
 @use "../style/general" as*;
+@use "../style/partials/variables" as*;
 
-nav {
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: $primary;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 
-    li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
+    nav {
+        
+        ul {
+            display: flex;
+            gap: 100px;
 
-        // img {
-        //     width: 25px;
-        //     margin-right: 5px;
-        //     filter: brightness(50%);
-        //     transition: all 0.3s;
-        // }
+            li {
+                &:hover {
+                    cursor: pointer;
+                    color: $secondary;
+                }
+            }
+        }
 
-        // &:hover img {
-        //     filter: brightness(100%);
-        //     scale: 1.2;
-        // }
+        .selected {
+            color: $secondary;
+        }
+
     }
-
-    .selected {
-        color: red;
-
-        // img {
-        //     filter: brightness(100%);
-        //     scale: 1.2;
-        // }
-    }
-
 }
+
 </style>
