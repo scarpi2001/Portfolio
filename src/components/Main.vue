@@ -46,7 +46,7 @@ export default {
 
 main {
     height: 100vh;
-    margin-top: 60px;
+    margin-top: 80px;
     background-color: $background;
 }
 

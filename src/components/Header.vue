@@ -8,16 +8,20 @@ export default {
             store,
             menu: [
                 {
-                    text: "Home",
+                    icon: "fa-solid fa-house-user",
+                    text: "HOME",
                 },
                 {
-                    text: "About",
+                    icon : "fa-solid fa-address-card",
+                    text: "ABOUT",
                 },
-                {
+                {   
+                    icon: "fa-solid fa-file",
                     text: "CV",
                 },
                 {
-                    text: "Projects"
+                    icon: "fa-solid fa-briefcase",
+                    text: "PROJECTS",
                 }
             ]
         }
@@ -38,9 +42,12 @@ export default {
             <ul>
                 <li v-for="(menuVoice, index) in menu" :key="index" @click="currentVoice(index)"
                     :class="{ selected: store.active === index }">
-                    <span>
+                    <div>
+                        <font-awesome-icon :icon=menuVoice.icon />
+                    </div>
+                    <h4>
                         {{ menuVoice.text }}
-                    </span>
+                    </h4>
                 </li>
             </ul>
         </nav>
@@ -60,7 +67,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 80px;
     background-color: $primary;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 
@@ -71,15 +78,24 @@ header {
             gap: 100px;
 
             li {
+                text-align: center;
+                transition: all 0.3s;
+
+                div {
+                    font-size: 20px;
+                }
+
                 &:hover {
                     cursor: pointer;
                     color: $secondary;
+                    scale: 1.2;
                 }
             }
         }
 
         .selected {
             color: $secondary;
+            scale: 1.2;
         }
 
     }
