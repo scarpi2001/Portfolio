@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-
+  
   <Header />
 
   <Main />
@@ -26,7 +26,4 @@ export default {
 <style lang="scss">
 @use './style/general' as*;
 
-/* smartphone version */
-@media screen and (max-width: 600px) {
-}
 </style>

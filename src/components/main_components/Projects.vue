@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "Cv",
+    name: "Projects",
 }
 </script>
 
@@ -25,7 +25,7 @@ export default {
     margin: 0 auto;
 
     h1 {
-        font-size: 70px;
+        font-size: 90px;
         color: $secondary;
     }
 }

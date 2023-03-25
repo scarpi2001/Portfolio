@@ -79,7 +79,7 @@ header {
 
             li {
                 text-align: center;
-                transition: all 0.3s;
+                transition: all 0.2s;
 
                 div {
                     font-size: 20px;
@@ -99,6 +99,11 @@ header {
         }
 
     }
+}
+
+/* smartphone version */
+@media screen and (max-width: 400px) {
+    
 }
 
 </style>

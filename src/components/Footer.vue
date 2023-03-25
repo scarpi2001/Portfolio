@@ -46,7 +46,7 @@ footer {
     align-items: center;
     height: 60px;
     background-color: $primary;
-    box-shadow: 8px 0 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 0 8px 8px rgba(0, 0, 0, 0.1);
 
     .contacts_box {
         font-size: 30px;
