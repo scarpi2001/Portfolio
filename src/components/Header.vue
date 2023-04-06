@@ -42,7 +42,7 @@ export default {
 
 <template>
 
-    <header :class="{ 'mobile': showMobileMenu }">
+    <header :class="{ 'dropdown': showMobileMenu }">
         <div class="logo" :class="{ 'hidden': showMobileMenu }">
             Marco Scarpelli | Portfolio
         </div>
@@ -130,6 +130,7 @@ header {
 @media screen and (max-width: 700px) {
     header {
         padding: 0 20px;
+        transition: all 0.5s ease;
 
         .logo {
             color: $secondary;
@@ -145,7 +146,21 @@ header {
 
             ul {
                 flex-direction: column;
+
+                li {
+                    border-bottom: 1px solid;
+                }
+                
             }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        nav.active ul {
+            animation: fadeIn 0.8s ease forwards;
         }
 
         .active {
@@ -158,9 +173,9 @@ header {
 
     }
 
-    .mobile {
+    .dropdown {
         display: block;
-        height: auto;
+        height: 100vh;
     }
     
 }
