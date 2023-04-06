@@ -127,7 +127,7 @@ header {
 }
 
 /* mobile version */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
     header {
         padding: 0 20px;
 
