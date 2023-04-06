@@ -7,7 +7,7 @@ export default {
 <template>
 
     <div class="container">
-        <h1>Work in progress</h1>
+        <h1>Work in progress...</h1>
     </div>
     
 </template>
@@ -25,7 +25,7 @@ export default {
     margin: 0 auto;
 
     h1 {
-        font-size: 60px;
+        font-size: 40px;
         color: $secondary;
     }
 }

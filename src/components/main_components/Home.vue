@@ -7,7 +7,7 @@ export default {
 <template>
 
     <div class="container">
-        <h1>Work in progress</h1>
+        <h1>Work in progress...</h1>
     </div>
     
 </template>
@@ -20,13 +20,14 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1000px;
+    text-align: center;
     height: 100%;
     margin: 0 auto;
 
     h1 {
-        font-size: 80px;
+        font-size: 50px;
         color: $secondary;
     }
 }
+
 </style>

@@ -45,12 +45,12 @@ footer {
     justify-content: start;
     align-items: center;
     height: 60px;
+    padding: 0 30px;
     background-color: $primary;
     box-shadow: 8px 0 8px 8px rgba(0, 0, 0, 0.1);
 
     .contacts_box {
         font-size: 30px;
-        margin-left: 60px;
 
         ul {
             display: flex;
@@ -64,6 +64,13 @@ footer {
                 }
             }
         }
+    }
+}
+
+/* smartphone version */
+@media screen and (max-width: 400px) {
+    footer {
+        justify-content: center;
     }
 }
 </style>
