@@ -19,32 +19,29 @@ export default {
     data() {
         return {
             store,
+            components: [Home, About, Cv, Projects]
         }
     },
 }
 </script>
 
+<!-- in questo modo con il componente dinamico i componenti vengono renderizzati e distrutti ogni volta che active cambia (questo ottimizza il rendering iniziale) -->
 <template>
-
     <main>
-        <section v-show="store.active === 0">
-            <Home />
-        </section>
-
-        <section v-show="store.active === 1">
-            <About />
-        </section>
-
-        <section v-show="store.active === 2">
-            <Cv />
-        </section>
-
-        <section v-show="store.active === 3">
-            <Projects />
+        <section>
+            <component :is="components[store.active]" />
         </section>
     </main>
-    
 </template>
+
+<!-- in questo modo i componenti vengano renderizzati dal principio e mostrati o nascosti in base alla variabile visible (ottimizza il toggle delle voci di menu) -->
+<!-- <template>
+    <main>
+        <section>
+            <component :is="components[store.active]" v-show="store.visible" />
+        </section>
+    </main>
+</template> -->
 
 <style lang="scss" scoped>
 @use "../style/general" as*;
