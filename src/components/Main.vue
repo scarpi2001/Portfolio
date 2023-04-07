@@ -25,23 +25,21 @@ export default {
 }
 </script>
 
-<!-- in questo modo con il componente dinamico i componenti vengono renderizzati e distrutti ogni volta che active cambia (questo ottimizza il rendering iniziale) -->
 <template>
+    <!-- in questo modo con il componente dinamico i componenti vengono renderizzati e distrutti ogni volta che active cambia (questo ottimizza il rendering iniziale) -->
     <main>
         <section>
             <component :is="components[store.active]" />
         </section>
     </main>
-</template>
 
-<!-- in questo modo i componenti vengano renderizzati dal principio e mostrati o nascosti in base alla variabile visible (ottimizza il toggle delle voci di menu) -->
-<!-- <template>
-    <main>
+    <!-- in questo modo i componenti vengano renderizzati dal principio e mostrati o nascosti in base alla variabile visible (ottimizza il toggle delle voci di menu) -->
+    <!-- <main>
         <section>
             <component :is="components[store.active]" v-show="store.visible" />
         </section>
-    </main>
-</template> -->
+    </main> -->
+</template>
 
 <style lang="scss" scoped>
 @use "../style/general" as*;
