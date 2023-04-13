@@ -45,7 +45,7 @@ footer {
     justify-content: start;
     align-items: center;
     height: 60px;
-    padding: 0 30px;
+    padding: 0 100px;
     background-color: $primary;
     box-shadow: 8px 0 8px 8px rgba(0, 0, 0, 0.1);
 
@@ -60,7 +60,11 @@ footer {
                 text-align: center;
 
                 a {
-                    color: $secondary;
+                    color: black;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: $secondary;
+                    }
                 }
             }
         }

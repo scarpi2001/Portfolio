@@ -43,9 +43,9 @@ export default {
 <template>
 
     <header :class="{ 'dropdown': showMobileMenu }">
-        <div class="logo" :class="{ 'hidden': showMobileMenu }">
+        <h1 class="logo" :class="{ 'hidden': showMobileMenu }">
             Marco Scarpelli | Portfolio
-        </div>
+        </h1>
 
         <div class="hamburger-menu" :class="{ 'hidden': showMobileMenu }" @click="toggleMobileMenu">
         <!-- <font-awesome-icon icon="fa-solid fa-bars" /> -->
@@ -81,7 +81,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
     padding: 0 100px;
     background-color: $primary;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);

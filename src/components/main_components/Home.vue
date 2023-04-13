@@ -7,7 +7,8 @@ export default {
 <template>
 
     <div class="container">
-        <h1>Work in progress...</h1>
+        <h1>Marco Scarpelli</h1>
+        <h2>Junior Full Stack Web Developer</h2>
     </div>
     
 </template>
@@ -17,9 +18,10 @@ export default {
 @use "../../style/partials/variables" as*;
 
 .container {
+    padding: 260px 100px;
 
     h1 {
-        font-size: 50px;
+        font-size: 80px;
         color: $secondary;
     }
 }

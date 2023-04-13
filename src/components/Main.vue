@@ -46,8 +46,8 @@ export default {
 @use "../style/partials/variables" as*;
 
 main {
-    height: 100vh;
-    margin-top: 80px;
+    height: calc( 100vh - 160px);
+    margin-top: 100px;
     background-color: $background;
 
     section {
