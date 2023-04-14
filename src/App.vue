@@ -25,5 +25,4 @@ export default {
 
 <style lang="scss">
 @use './style/general' as*;
-
 </style>

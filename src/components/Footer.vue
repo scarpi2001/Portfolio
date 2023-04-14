@@ -24,15 +24,17 @@ export default {
 
 <template>
     <footer>
-        <div class="contacts_box">
-            <ul>
-                <li v-for="(contact, index) in contacts" :key="index">
-                    <a :href="contact.link">
-                        <font-awesome-icon :icon=contact.icon />
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <nav>
+            <div class="contacts_box">
+                <ul>
+                    <li v-for="(contact, index) in contacts" :key="index">
+                        <a :href="contact.link">
+                            <font-awesome-icon :icon=contact.icon />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </footer>
 </template>
 
@@ -42,35 +44,38 @@ export default {
 
 footer {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    height: 60px;
-    padding: 0 100px;
+    height: 80px;
+    padding: 0 20px;
     background-color: $primary;
     box-shadow: 8px 0 8px 8px rgba(0, 0, 0, 0.1);
 
-    .contacts_box {
+    nav {
+        width: 1200px;
+        .contacts_box {
         font-size: 30px;
 
-        ul {
-            display: flex;
-            gap: 80px;
+            ul {
+                display: flex;
+                gap: 80px;
 
-            li {
-                text-align: center;
+                li {
+                    text-align: center;
 
-                a {
-                    color: black;
-                    transition: all 0.3s;
-                    &:hover {
-                        color: $secondary;
+                    a {
+                        color: black;
+                        transition: all 0.3s;
+                        &:hover {
+                            color: $secondary;
+                        }
                     }
                 }
             }
         }
     }
 }
-
+    
 /* smartphone version */
 @media screen and (max-width: 400px) {
     footer {

@@ -30,7 +30,7 @@ export default {
     <main>
         <section>
             <component :is="components[store.active]" />
-        </section>
+        </section>  
     </main>
 
     <!-- in questo modo i componenti vengano renderizzati dal principio e mostrati o nascosti in base alla variabile visible (ottimizza il toggle delle voci di menu) -->
@@ -46,13 +46,13 @@ export default {
 @use "../style/partials/variables" as*;
 
 main {
-    height: calc( 100vh - 160px);
+    height: calc( 100vh - 180px );
     margin-top: 100px;
+    padding: 0 20px;
     background-color: $background;
-
-    section {
-        height: 100%;
-    }
+    
+    // overflow: hidden;
+    // overflow-y: auto;
 }
 
 </style>
