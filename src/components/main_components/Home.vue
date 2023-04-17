@@ -6,13 +6,13 @@ export default {
 
 <template>
 
-    <div class="container">
-        <div>
+    <section class="container">
+        <div class="card">
             <h1>Marco Scarpelli</h1>
             <h2>Junior Full Stack Web Developer</h2>
         </div>
         
-        <div>
+        <div class="card">
             <h2>
                 Benvenuti nel mio sito! 
             </h2>
@@ -22,7 +22,7 @@ export default {
                 se volete potete dare un occhiata al mio cv e ai miei progetti!
             </p>
         </div>
-    </div>
+    </section>
     
 </template>
 
@@ -43,7 +43,7 @@ export default {
     }
 
     p {
-        font-size: 18px;
+        font-size: 22px;
     }
 }
 

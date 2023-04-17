@@ -28,16 +28,12 @@ export default {
 <template>
     <!-- in questo modo con il componente dinamico i componenti vengono renderizzati e distrutti ogni volta che active cambia (questo ottimizza il rendering iniziale) -->
     <main>
-        <section>
-            <component :is="components[store.active]" />
-        </section>  
+        <component :is="components[store.active]" />
     </main>
 
     <!-- in questo modo i componenti vengano renderizzati dal principio e mostrati o nascosti in base alla variabile visible (ottimizza il toggle delle voci di menu) -->
     <!-- <main>
-        <section>
-            <component :is="components[store.active]" v-show="store.visible" />
-        </section>
+        <component :is="components[store.active]" v-show="store.visible" />
     </main> -->
 </template>
 
@@ -50,9 +46,8 @@ main {
     margin-top: 100px;
     padding: 0 20px;
     background-color: $background;
-    
-    // overflow: hidden;
-    // overflow-y: auto;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 </style>

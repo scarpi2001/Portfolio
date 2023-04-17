@@ -25,7 +25,8 @@ export default {
 <template>
     <footer>
         <nav>
-            <div class="contacts_box">
+
+            <div id="contacts_box">
                 <ul>
                     <li v-for="(contact, index) in contacts" :key="index">
                         <a :href="contact.link">
@@ -34,6 +35,11 @@ export default {
                     </li>
                 </ul>
             </div>
+
+            <h4>
+                Copyright © 2023 - All rights reserved
+            </h4>
+            
         </nav>
     </footer>
 </template>
@@ -45,16 +51,19 @@ export default {
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 80px;
     padding: 0 20px;
     background-color: $primary;
     box-shadow: 8px 0 8px 8px rgba(0, 0, 0, 0.1);
 
     nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 1200px;
-        .contacts_box {
-        font-size: 30px;
+
+        #contacts_box {
+            font-size: 30px;
 
             ul {
                 display: flex;
@@ -66,6 +75,7 @@ footer {
                     a {
                         color: black;
                         transition: all 0.3s;
+
                         &:hover {
                             color: $secondary;
                         }
