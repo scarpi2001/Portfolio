@@ -6,46 +6,46 @@ export default {
             frontSkills: [
                 {
                     name: "html",
-                    img: "../../../public/html.svg",
+                    img: "html.svg",
                 },
                 {
                     name: "css",
-                    img: "../../../public/css-icon.svg",
+                    img: "css-icon.svg",
                 },
                 {
                     name: "js",
-                    img: "../../../public/js-icon.svg",
+                    img: "js-icon.svg",
                 },
                 {
                     name: "sass",
-                    img: "../../../public/sass-icon.svg",
+                    img: "sass-icon.svg",
                 },
                 {
                     name: "bootstrap",
-                    img: "../../../public/bootstrap-icon.svg",
+                    img: "bootstrap-icon.svg",
                 },
                 {
                     name: "tailwind",
-                    img: "../../../public/tailwind.svg",
+                    img: "tailwind.svg",
                 },
                 {
                     name: "vue",
-                    img: "../../../public/vue-icon.svg",
+                    img: "vue-icon.svg",
                 },
                 
             ],
             backSkills: [
                 {
                     name: "php",
-                    img: "../../../public/php-icon.svg",
+                    img: "php-icon.svg",
                 },
                 {
                     name: "mysql",
-                    img: "../../../public/mysql-icon.svg",
+                    img: "mysql-icon.svg",
                 },
                 {
                     name: "laravel",
-                    img: "../../../public/laravel-icon.svg",
+                    img: "laravel-icon.svg",
                 }, 
             ]
         }
@@ -115,6 +115,9 @@ export default {
         padding-bottom: 80px;
 
         .skill {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: calc( 25% - 20px );
         }
     }
