@@ -7,7 +7,15 @@ export default {
 <template>
 
     <div class="container">
-        <h1>Work in progress...</h1>
+        <a href="Marco_Scarpelli_CV.pdf">
+            Scarica il mio CV
+        </a>
+
+        <img src="Marco_Scarpelli_CV.png" alt="CV">
+        
+        <a href="Marco_Scarpelli_CV.pdf">
+            Scarica il mio CV
+        </a>
     </div>
     
 </template>
@@ -17,10 +25,23 @@ export default {
 @use "../../style/partials/variables" as*;
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0;
 
-    h1 {
-        font-size: 30px;
-        color: $secondary;
+    img {
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    a {
+        background-color: $secondary;
+        color: $primary;
+        border-radius: 20px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 </style>

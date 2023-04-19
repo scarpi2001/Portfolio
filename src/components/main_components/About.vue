@@ -55,7 +55,7 @@ export default {
 
 <template>
 
-    <section class="container">
+    <div class="container">
         <h1>ABOUT ME</h1>
         <p class="card">
             Mi chiamo Marco Scarpelli ed ho 21 anni.<br>
@@ -63,9 +63,9 @@ export default {
             Mi piace programmare, rimanere sempre aggiornato su nuove tecnologie e mettermi costantemente alla prova,<br>
             Il mio obiettivo è continuare a crescere come sviluppatore e contribuire alla realizzazione e al mantenimento di progetti innovativi.
         </p>
-    </section>
+    </div>
 
-    <section class="container">
+    <div class="container">
         <h1>TECNOLOGIE FRONTEND</h1>
 
         <div class="cards_box">
@@ -81,7 +81,7 @@ export default {
                 <img :src="backSkill.img" :alt="backSkill.name">
             </div>
         </div>
-    </section>
+    </div>
     
 </template>
 

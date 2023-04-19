@@ -6,7 +6,7 @@ export default {
 
 <template>
 
-    <section class="container">
+    <div class="container">
         <div class="card">
             <h1>Marco Scarpelli</h1>
             <h2>Junior Full Stack Web Developer</h2>
@@ -22,7 +22,7 @@ export default {
                 se volete potete dare un occhiata al mio cv e ai miei progetti!
             </p>
         </div>
-    </section>
+    </div>
     
 </template>
 
