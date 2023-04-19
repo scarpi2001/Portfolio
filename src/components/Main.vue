@@ -42,7 +42,6 @@ export default {
 @use "../style/partials/variables" as*;
 
 main {
-    height: calc(100vh - 180px);
     margin-top: 100px;
     padding: 0 20px;
     background-color: $background;

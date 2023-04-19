@@ -34,7 +34,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: calc(100vh - 180px);
     gap: 50px;
 
     h1 {

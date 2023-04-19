@@ -46,9 +46,9 @@ export default {
 
         <nav :class="{ 'dropdown_nav': showMobileMenu }">
 
-            <h1 class="logo" :class="{ 'hidden': showMobileMenu }">
-                Marco Scarpelli | Portfolio
-            </h1>
+            <figure class="logo" :class="{ 'hidden': showMobileMenu }">
+                <img src="Logo.png" alt="Logo">
+            </figure>
 
             <div class="hamburger-menu" :class="{ 'hidden': showMobileMenu }" @click="toggleMobileMenu">
                 <!-- <font-awesome-icon icon="fa-solid fa-bars" /> -->
@@ -99,8 +99,13 @@ header {
         width: 1200px;
 
         .logo {
-            color: $secondary;
-            font-size: 30px;
+            display: flex;
+            align-items: center;
+            width: 70px;
+
+            img {
+                border-radius: 50%;
+            }
         }
 
         .hamburger-menu {
