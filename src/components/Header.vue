@@ -47,7 +47,7 @@ export default {
         <nav :class="{ 'dropdown_nav': showMobileMenu }">
 
             <figure class="logo" :class="{ 'hidden': showMobileMenu }">
-                <img src="/logo.png" alt="logo">
+                <img src="/logo.JPG" alt="logo">
             </figure>
 
             <div class="hamburger-menu" :class="{ 'hidden': showMobileMenu }" @click="toggleMobileMenu">
