@@ -116,6 +116,61 @@ export default {
                     livePrev:"https://scarpi2001.github.io/proj-html-vuejs/",
                     gitHub:"https://github.com/scarpi2001/proj-html-vuejs",
                 },
+                {   
+                    img:"/dashboard.png",
+                    title:"Bootstrap Dashboard",
+                    skills:[
+                        {
+                            name:"html",
+                            img:"/html.svg"
+                        },
+                        {
+                            name:"css",
+                            img:"/css-icon.svg"
+                        },
+                        {
+                            name:"bootstrap",
+                            img:"/bootstrap-icon.svg"
+                        },
+                    ],
+                    description:"Una dashboard completamente responsive creata utilizzando bootstrap",
+                    livePrev:"https://scarpi2001.github.io/html-css-bootstrap-dashboard/",
+                    gitHub:"https://github.com/scarpi2001/html-css-bootstrap-dashboard",
+                },
+                {   
+                    img:"/dropbox.png",
+                    title:"Dropbox",
+                    skills:[
+                        {
+                            name:"html",
+                            img:"/html.svg"
+                        },
+                        {
+                            name:"css",
+                            img:"/css-icon.svg"
+                        },
+                    ],
+                    description:"Uno dei miei primi progetti, una pagina ispirata alla homepage di Dropbox",
+                    livePrev:"https://dropboxms.netlify.app",
+                    gitHub:"https://github.com/scarpi2001/htmlcss-dropbox",
+                },
+                {   
+                    img:"/discord.png",
+                    title:"Discord",
+                    skills:[
+                        {
+                            name:"html",
+                            img:"/html.svg"
+                        },
+                        {
+                            name:"css",
+                            img:"/css-icon.svg"
+                        },
+                    ],
+                    description:"Uno dei miei primi progetti, una pagina ispirata alla homepage di Discord",
+                    livePrev:"https://scarpi2001.github.io/htmlcss-discord/",
+                    gitHub:"https://github.com/scarpi2001/htmlcss-discord",
+                },
             ]
         }
     }
@@ -129,7 +184,7 @@ export default {
             <!-- card -->
             <div class="card" v-for="project in projects">
                 <!-- img -->
-                <img :src="project.img" :alt="project.title">
+                <img class="project_img" :src="project.img" :alt="project.title">
                 <!-- titolo -->
                 <h2>{{ project.title }}</h2>
                 <!-- skills -->
@@ -168,7 +223,7 @@ export default {
             height: 450px;
             padding: 0;
 
-            img {
+            .project_img {
                 border-top-right-radius: 20px;
                 border-top-left-radius: 20px;
             }
