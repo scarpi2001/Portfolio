@@ -7,7 +7,7 @@ export default {
 <template>
 
     <div class="container">
-        <h1>Work in progress...</h1>
+        <a href="https://scarpi2001.github.io/vue-spotifyweb/">Live preview</a>
     </div>
     
 </template>
