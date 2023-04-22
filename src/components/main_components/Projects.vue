@@ -83,7 +83,7 @@ export default {
                             img:"/vue-icon.svg"
                         },
                     ],
-                    description:"Una replica di Netflix full responsive che utilizza delle chiamate API per la visualizzazione e la ricerca di film",
+                    description:"Una replica di Netflix che utilizza delle chiamate API per la visualizzazione e la ricerca di film",
                     livePrev:"https://scarpi2001.github.io/vite-boolflix/",
                     gitHub:"https://github.com/scarpi2001/vite-boolflix",
                 },
@@ -256,10 +256,32 @@ export default {
                 border-top: 1px solid rgb(177, 177, 177);
 
                 a {
-                    padding: 10px 30px;
+                    padding: 10px 20px;
                 }
             }
         }
+    }
+}
+
+//md version
+@media screen and (max-width: 980px) {
+    .container {
+        .cards_box {
+            .card {
+                width: calc( 50% - 50px );
+            }
+        } 
+    }
+}
+
+//s version
+@media screen and (max-width: 600px) {
+    .container {
+        .cards_box {
+            .card {
+                width: 100%;
+            }
+        } 
     }
 }
 </style>

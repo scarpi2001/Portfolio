@@ -26,7 +26,7 @@ export default {
     <footer>
         <nav>
 
-            <div id="contacts_box">
+            <div class="contacts_box">
                 <ul>
                     <li v-for="(contact, index) in contacts" :key="index">
                         <a :href="contact.link">
@@ -37,7 +37,8 @@ export default {
             </div>
 
             <h4>
-                Copyright © 2023 - All rights reserved
+                <span>Copyright © 2023</span>
+                <span id="copyright_2nd">- All rights reserved</span>
             </h4>
             
         </nav>
@@ -60,9 +61,10 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 30px;
         width: 1200px;
 
-        #contacts_box {
+        .contacts_box {
             font-size: 30px;
 
             ul {
@@ -74,13 +76,25 @@ footer {
                 }
             }
         }
+
+        h4 {
+            text-align: center;
+        }
     }
 }
     
-/* smartphone version */
-@media screen and (max-width: 400px) {
-    footer {
-        justify-content: center;
+//s version
+@media screen and (max-width: 600px) {
+    nav {
+        .contacts_box {
+            ul {
+                gap: 30px !important;
+            }
+        }
+    }
+    
+    span:nth-child(2) {
+        display: none;
     }
 }
 </style>

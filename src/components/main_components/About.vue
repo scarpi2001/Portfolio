@@ -77,7 +77,7 @@ export default {
         <h1>TECNOLOGIE BACKEND</h1>
 
         <div class="cards_box">
-            <div class="skill card" v-for="backSkill in backSkills">
+            <div class="card" v-for="backSkill in backSkills">
                 <img :src="backSkill.img" :alt="backSkill.name">
             </div>
         </div>
@@ -109,15 +109,48 @@ export default {
 
     .cards_box {
         gap: 20px;
-        width: 800px;
+        max-width: 800px;
         padding-bottom: 80px;
 
-        .skill {
+        .card {
             display: flex;
             justify-content: center;
             align-items: center;
             width: calc( 25% - 20px );
         }
+    }
+}
+
+//md version
+@media screen and (max-width: 900px) {
+    .container {
+        .cards_box {
+            .card {
+                width: calc( 100% / 3 - 50px );
+            }
+        } 
+    }
+}
+
+//s version
+@media screen and (max-width: 730px) {
+    .container {
+        .cards_box {
+            .card {
+                width: calc( 50% - 50px );
+            }
+        } 
+    }
+}
+
+//xs version
+@media screen and (max-width: 360px) {
+    .container {
+        .cards_box {
+            .card {
+                width: 100%;
+            }
+        } 
     }
 }
 </style>

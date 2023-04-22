@@ -47,4 +47,23 @@ export default {
     }
 }
 
+//s version
+@media screen and (max-width: 660px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 80px 0;
+        height: auto;
+    }
+}
+
+//xs version
+@media screen and (max-width: 360px) {
+    .container {
+        h1 {
+            font-size: 50px;
+        }
+    }
+    
+}
 </style>
