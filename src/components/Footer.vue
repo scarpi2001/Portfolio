@@ -71,15 +71,6 @@ footer {
 
                 li {
                     text-align: center;
-
-                    a {
-                        color: black;
-                        transition: all 0.3s;
-
-                        &:hover {
-                            color: $secondary;
-                        }
-                    }
                 }
             }
         }

@@ -17,7 +17,14 @@ ul {
 }
 
 a {
+    color: black;
     text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $secondary;
+    }
+    
 }
 
 img {
@@ -32,6 +39,11 @@ img {
 }
 
 //CARDS
+.cards_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card {
     background-color: $primary;
     padding: 30px;

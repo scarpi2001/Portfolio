@@ -108,8 +108,6 @@ export default {
     }
 
     .cards_box {
-        display: flex;
-        flex-wrap: wrap;
         gap: 20px;
         width: 800px;
         padding-bottom: 80px;
