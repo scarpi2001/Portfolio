@@ -6,46 +6,46 @@ export default {
             frontSkills: [
                 {
                     name: "html",
-                    img: "html.svg",
+                    img: "/html.svg",
                 },
                 {
                     name: "css",
-                    img: "css-icon.svg",
+                    img: "/css-icon.svg",
                 },
                 {
                     name: "js",
-                    img: "js-icon.svg",
+                    img: "/js-icon.svg",
                 },
                 {
                     name: "sass",
-                    img: "sass-icon.svg",
+                    img: "/sass-icon.svg",
                 },
                 {
                     name: "bootstrap",
-                    img: "bootstrap-icon.svg",
+                    img: "/bootstrap-icon.svg",
                 },
                 {
                     name: "tailwind",
-                    img: "tailwind.svg",
+                    img: "/tailwind.svg",
                 },
                 {
                     name: "vue",
-                    img: "vue-icon.svg",
+                    img: "/vue-icon.svg",
                 },
                 
             ],
             backSkills: [
                 {
                     name: "php",
-                    img: "php-icon.svg",
+                    img: "/php-icon.svg",
                 },
                 {
                     name: "mysql",
-                    img: "mysql-icon.svg",
+                    img: "/mysql-icon.svg",
                 },
                 {
                     name: "laravel",
-                    img: "laravel-icon.svg",
+                    img: "/laravel-icon.svg",
                 }, 
             ]
         }
