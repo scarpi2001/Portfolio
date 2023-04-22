@@ -7,13 +7,13 @@ export default {
 <template>
 
     <div class="container">
-        <a href="Marco_Scarpelli_CV.pdf">
+        <a href="/cv.pdf">
             Scarica il mio CV
         </a>
 
-        <img src="Marco_Scarpelli_CV.png" alt="CV">
+        <img src="/cv.png" alt="CV">
         
-        <a href="Marco_Scarpelli_CV.pdf">
+        <a href="/cv.pdf">
             Scarica il mio CV
         </a>
     </div>
