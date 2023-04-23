@@ -50,9 +50,10 @@ export default {
                 <img src="/logo.svg" alt="logo">
             </figure>
 
-            <div class="hamburger-menu" :class="{ 'hidden': showMobileMenu }" @click="toggleMobileMenu">
-                <!-- <font-awesome-icon icon="fa-solid fa-bars" /> -->
-                X
+            <div class="hamburger-menu" :class="{ 'open': showMobileMenu }" @click="toggleMobileMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
 
             <div class="menu" :class="{ 'active': showMobileMenu }">
@@ -157,12 +158,47 @@ header {
                 font-size: 18px;
             }
             .hamburger-menu {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 43px;
+                right: 20px;
+                gap: 5px;
+                cursor: pointer;
+                transition: all 0.5s ease-out;
+
+                .bar {
+                    width: 30px;
+                    height: 3px;
+                    background-color: $secondary;
+                    transition: all 0.5s ease-out;
+                }
+
+                .bar:nth-child(3) {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+
+            .hamburger-menu.open {  
+                transform: rotate(180deg);
+                .bar:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+
+                .bar:nth-child(2) {
+                    opacity: 0;
+                }
+
+                .bar:nth-child(3) {
+                    transform: rotate(-45deg) translate(6px, -6px);
+                }
             }
 
             .menu {
                 display: none;
-                padding: 50px 0;
+                padding: 100px 0;
 
                 ul {
                     flex-direction: column;
@@ -203,6 +239,7 @@ header {
         display: block;
         width: auto;
     }
+
 }
 
 </style>
