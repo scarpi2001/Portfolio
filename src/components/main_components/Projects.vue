@@ -88,6 +88,27 @@ export default {
                     gitHub:"https://github.com/scarpi2001/vite-boolflix",
                 },
                 {   
+                    img:"/dashboard.png",
+                    title:"Bootstrap Dashboard",
+                    skills:[
+                        {
+                            name:"html",
+                            img:"/html.svg"
+                        },
+                        {
+                            name:"css",
+                            img:"/css-icon.svg"
+                        },
+                        {
+                            name:"bootstrap",
+                            img:"/bootstrap-icon.svg"
+                        },
+                    ],
+                    description:"Una dashboard completamente responsive creata utilizzando bootstrap",
+                    livePrev:"https://scarpi2001.github.io/html-css-bootstrap-dashboard/",
+                    gitHub:"https://github.com/scarpi2001/html-css-bootstrap-dashboard",
+                },
+                {   
                     img:"/personal.png",
                     title:"AvadaSEO",
                     skills:[
@@ -115,27 +136,6 @@ export default {
                     description:"Un sito completo creato con Vue3",
                     livePrev:"https://scarpi2001.github.io/proj-html-vuejs/",
                     gitHub:"https://github.com/scarpi2001/proj-html-vuejs",
-                },
-                {   
-                    img:"/dashboard.png",
-                    title:"Bootstrap Dashboard",
-                    skills:[
-                        {
-                            name:"html",
-                            img:"/html.svg"
-                        },
-                        {
-                            name:"css",
-                            img:"/css-icon.svg"
-                        },
-                        {
-                            name:"bootstrap",
-                            img:"/bootstrap-icon.svg"
-                        },
-                    ],
-                    description:"Una dashboard completamente responsive creata utilizzando bootstrap",
-                    livePrev:"https://scarpi2001.github.io/html-css-bootstrap-dashboard/",
-                    gitHub:"https://github.com/scarpi2001/html-css-bootstrap-dashboard",
                 },
                 {   
                     img:"/dropbox.png",
@@ -186,7 +186,9 @@ export default {
                 <!-- img -->
                 <img class="project_img" :src="project.img" :alt="project.title">
                 <!-- titolo -->
-                <h2>{{ project.title }}</h2>
+                <h2>
+                    <a :href="project.livePrev">{{ project.title }}</a>
+                </h2>
                 <!-- skills -->
                 <ul>
                     <li v-for="skill in project.skills">
@@ -197,8 +199,12 @@ export default {
                 <p>{{ project.description }}</p>
                 <!-- links -->
                 <div>
-                    <a :href="project.livePrev">Live Preview</a>
-                    <a :href="project.gitHub">GitHub</a>
+                    <h3>
+                        <a :href="project.livePrev">Live Preview</a>
+                    </h3>
+                    <h3>
+                        <a :href="project.gitHub">GitHub</a>
+                    </h3>
                 </div>
 
             </div>
@@ -229,7 +235,6 @@ export default {
             }
 
             h2 {
-                color: $secondary;
                 padding: 0 10px;
             }
 
@@ -246,6 +251,7 @@ export default {
             }
 
             p {
+                font-size: 18px;
                 padding: 0 10px;
             }
 
@@ -255,8 +261,8 @@ export default {
                 margin-top: 20px;
                 border-top: 1px solid rgb(177, 177, 177);
 
-                a {
-                    padding: 10px 20px;
+                h3 {
+                    padding: 15px 20px;
                 }
             }
         }
@@ -280,6 +286,7 @@ export default {
         .cards_box {
             .card {
                 width: 100%;
+                height: 500px;
             }
         } 
     }

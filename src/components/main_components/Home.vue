@@ -63,6 +63,16 @@ export default {
         h1 {
             font-size: 50px;
         }
+
+        .card {
+            h2 {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            font-size: 26px
+        }
     }
     
 }
