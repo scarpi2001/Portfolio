@@ -36,6 +36,9 @@ export default {
             this.store.active = index;
             this.showMobileMenu = false;
         },
+        home() {
+            this.store.active = 0;
+        },
     }
 }
 </script>
@@ -47,7 +50,7 @@ export default {
         <nav :class="{ 'dropdown_nav': showMobileMenu }">
 
             <figure class="logo" :class="{ 'hidden': showMobileMenu }">
-                <img src="/logo.svg" alt="logo">
+                <img src="/logo.svg" alt="logo" @click="home()">
             </figure>
 
             <div class="hamburger-menu" :class="{ 'open': showMobileMenu }" @click="toggleMobileMenu()">
@@ -106,6 +109,7 @@ header {
 
             img {
                 border-radius: 50%;
+                cursor: pointer;
             }
         }
 
@@ -174,10 +178,6 @@ header {
                     height: 3px;
                     background-color: $secondary;
                     transition: all 0.5s ease-out;
-                }
-
-                .bar:nth-child(3) {
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 }
             }
 
