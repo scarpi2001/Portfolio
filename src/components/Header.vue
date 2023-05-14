@@ -1,11 +1,8 @@
 <script>
-import { store } from "../store";
-
 export default {
   name: "Header",
   data() {
     return {
-      store,
       showMobileMenu: false,
       menu: [
         {
@@ -37,8 +34,7 @@ export default {
       this.showMobileMenu = !this.showMobileMenu;
     },
 
-    currentVoice(index) {
-      this.store.active = index;
+    closeMobileMenu() {
       this.showMobileMenu = false;
     },
   },
@@ -69,13 +65,9 @@ export default {
           <li
             v-for="(menuVoice, index) in menu"
             :key="index"
-            :class="{ selected: store.active === index }"
-            @click="currentVoice(index)"
+            @click="closeMobileMenu()"
           >
-            <router-link
-              :to="menuVoice.route"
-              :class="{ selected: store.active === index }"
-            >
+            <router-link :to="menuVoice.route">
               <div>
                 <font-awesome-icon :icon="menuVoice.icon" />
               </div>
@@ -152,7 +144,6 @@ header {
 
     .selected {
       color: $secondary;
-      scale: 1.2;
     }
   }
 }
