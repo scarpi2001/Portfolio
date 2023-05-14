@@ -11,18 +11,22 @@ export default {
         {
           icon: "fa-solid fa-house-user",
           text: "HOME",
+          route: "/",
         },
         {
           icon: "fa-solid fa-address-card",
           text: "ABOUT",
+          route: "/about",
         },
         {
           icon: "fa-solid fa-file",
           text: "CV",
+          route: "/cv",
         },
         {
           icon: "fa-solid fa-briefcase",
           text: "PROJECTS",
+          route: "/projects",
         },
       ],
     };
@@ -37,9 +41,6 @@ export default {
       this.store.active = index;
       this.showMobileMenu = false;
     },
-    home() {
-      this.store.active = 0;
-    },
   },
 };
 </script>
@@ -48,7 +49,9 @@ export default {
   <header :class="{ dropdown_header: showMobileMenu }">
     <nav :class="{ dropdown_nav: showMobileMenu }">
       <figure class="logo" :class="{ hidden: showMobileMenu }">
-        <img src="/logo.svg" alt="logo" @click="home()" />
+        <router-link to="/">
+          <img src="/logo.svg" alt="logo" />
+        </router-link>
       </figure>
 
       <div
@@ -66,15 +69,20 @@ export default {
           <li
             v-for="(menuVoice, index) in menu"
             :key="index"
-            @click="currentVoice(index)"
             :class="{ selected: store.active === index }"
+            @click="currentVoice(index)"
           >
-            <div>
-              <font-awesome-icon :icon="menuVoice.icon" />
-            </div>
-            <h4>
-              {{ menuVoice.text }}
-            </h4>
+            <router-link
+              :to="menuVoice.route"
+              :class="{ selected: store.active === index }"
+            >
+              <div>
+                <font-awesome-icon :icon="menuVoice.icon" />
+              </div>
+              <h4>
+                {{ menuVoice.text }}
+              </h4>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -136,7 +144,6 @@ header {
 
           &:hover {
             cursor: pointer;
-            color: $secondary;
             scale: 1.2;
           }
         }
