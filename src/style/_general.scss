@@ -1,71 +1,80 @@
-@use "./partials/variables" as*;
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@use "./partials/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 //GENERALI
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    color: black;
-    text-decoration: none;
-    transition: all 0.3s;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s;
 
-    &:hover {
-        color: $secondary;
-    }
-    
+  &:hover {
+    color: $secondary;
+  }
 }
 
 img {
-    max-width: 100%;
-    min-width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 //CONTAINER
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease forwards;
 }
 
 //CARDS
 .cards_box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
-    background-color: $primary;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: $primary;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 //scrollbar
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: $primary;
+  background: $primary;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $secondary;
+  background: $secondary;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0015ff;
+  background: #0015ff;
 }
 
+//custom animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
