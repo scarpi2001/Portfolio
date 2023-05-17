@@ -68,12 +68,14 @@ export default {
             @click="closeMobileMenu()"
           >
             <router-link :to="menuVoice.route">
-              <div>
-                <font-awesome-icon :icon="menuVoice.icon" />
+              <div class="menu_link">
+                <div>
+                  <font-awesome-icon :icon="menuVoice.icon" />
+                </div>
+                <h4>
+                  {{ menuVoice.text }}
+                </h4>
               </div>
-              <h4>
-                {{ menuVoice.text }}
-              </h4>
             </router-link>
           </li>
         </ul>
@@ -200,20 +202,18 @@ header {
 
         ul {
           flex-direction: column;
+          align-items: center;
+          gap: 50px;
+          transition: all 0.5s ease;
 
           li {
-            padding-bottom: 15px;
-            border-bottom: 1px solid;
-          }
-        }
-      }
+            width: 100px;
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
+            .menu_link {
+              padding-bottom: 10px;
+              border-bottom: 1px solid;
+            }
+          }
         }
       }
 
@@ -233,7 +233,7 @@ header {
 
   .dropdown_header {
     display: block;
-    height: 100vh;
+    height: 560px;
   }
 
   .dropdown_nav {
