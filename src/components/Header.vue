@@ -25,6 +25,11 @@ export default {
           text: "PROJECTS",
           route: "/projects",
         },
+        {
+          icon: "fa-solid fa-address-book",
+          text: "CONTACTS",
+          route: "/contacts",
+        },
       ],
     };
   },
@@ -151,7 +156,7 @@ header {
 }
 
 /* mobile version */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   header {
     padding: 0 20px;
     transition: all 0.5s ease;
@@ -198,7 +203,7 @@ header {
 
       .menu {
         display: none;
-        padding: 100px 0;
+        padding: 160px 0;
 
         ul {
           flex-direction: column;
@@ -218,7 +223,7 @@ header {
       }
 
       .menu.active ul {
-        animation: fadeIn 1.8s ease forwards;
+        animation: fadeIn 1s ease-in forwards;
       }
 
       .active {
@@ -233,7 +238,7 @@ header {
 
   .dropdown_header {
     display: block;
-    height: 560px;
+    height: 100vh;
   }
 
   .dropdown_nav {

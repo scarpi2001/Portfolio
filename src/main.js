@@ -11,7 +11,8 @@ import { faInstagram as fasInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faHomeUser as fasHomeUser } from "@fortawesome/free-solid-svg-icons";
 import { faAddressCard as fasAddressCard } from "@fortawesome/free-solid-svg-icons";
 import { faFile as fasFile } from "@fortawesome/free-solid-svg-icons";
-import { faBriefcase as fasBrieffaBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase as fasBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faAddressBook as fasAddressBook } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   fasInstagram,
@@ -20,7 +21,8 @@ library.add(
   fasHomeUser,
   fasAddressCard,
   fasFile,
-  fasBrieffaBriefcase
+  fasBriefcase,
+  fasAddressBook
 );
 createApp(App)
   .use(router)
