@@ -5,6 +5,7 @@ import About from "../components/main_components/About.vue";
 import Cv from "../components/main_components/Cv.vue";
 import Projects from "../components/main_components/Projects.vue";
 
+//rotte
 const routes = [
   { path: "/", component: Home },
   { path: "/about", component: About },
