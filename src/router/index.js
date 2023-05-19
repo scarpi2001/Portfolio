@@ -5,6 +5,7 @@ import About from "../components/main_components/About.vue";
 import Cv from "../components/main_components/Cv.vue";
 import Projects from "../components/main_components/Projects.vue";
 import Contacts from "../components/main_components/Contacts.vue";
+import Success from "../components/main_components/Success.vue";
 
 //rotte
 const routes = [
@@ -13,6 +14,7 @@ const routes = [
   { path: "/cv", component: Cv },
   { path: "/projects", component: Projects },
   { path: "/contacts", component: Contacts },
+  { path: "/thanks", component: Success },
 ];
 
 const router = createRouter({
