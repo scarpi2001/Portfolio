@@ -2,21 +2,60 @@
 <html lang="it">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7ZWLDN3Q0"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T7ZWLDN3Q0"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-T7ZWLDN3Q0');
+      gtag("config", "G-T7ZWLDN3Q0");
     </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pagina portfolio personale di Marco Scarpelli, un Junior Web Developer">
+    <meta
+      name="description"
+      content="Pagina portfolio personale di Marco Scarpelli, un Junior Web Developer"
+    />
     <title>Marco Scarpelli - Portfolio</title>
   </head>
+
   <body>
+    <form
+      class="contact-form"
+      action="/thanks"
+      name="contacts"
+      method="POST"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="contacts" />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Inserisci la tua email"
+        required
+      />
+
+      <label for="message">Messaggio</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Scrivi il tuo messaggio"
+        required
+      ></textarea>
+
+      <button type="submit">Invia</button>
+    </form>
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

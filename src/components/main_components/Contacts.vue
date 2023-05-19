@@ -44,7 +44,7 @@ export default {
       </div>
     </div>
 
-    <!-- <div id="form">
+    <div id="form">
       <h1>Form</h1>
       <div class="card">
         <form
@@ -52,7 +52,8 @@ export default {
           action="/thanks"
           name="contacts"
           method="POST"
-          netlify="true"
+          netlify
+          netlify-honeypot="bot-field"
         >
           <input type="hidden" name="form-name" value="contacts" />
           <label for="email">Email</label>
@@ -75,7 +76,7 @@ export default {
           <button type="submit">Invia</button>
         </form>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -118,62 +119,62 @@ export default {
     margin-bottom: 30px;
   }
 
-  //   .contact-form {
-  //     width: 600px;
+  .contact-form {
+    width: 600px;
 
-  //     label {
-  //       display: block;
-  //       text-align: left;
-  //       font-size: 20px;
-  //       font-weight: bold;
-  //     }
+    label {
+      display: block;
+      text-align: left;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-  //     input,
-  //     textarea {
-  //       width: 100%;
-  //       padding: 8px;
-  //       border: 1px solid #ccc;
-  //       border-radius: 4px;
-  //       margin-bottom: 10px;
-  //     }
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
 
-  //     button {
-  //       padding: 10px 20px;
-  //       background-color: $secondary;
-  //       color: $primary;
-  //       border: none;
-  //       border-radius: 4px;
-  //       cursor: pointer;
-  //       transition: all 0.2s;
+    button {
+      padding: 10px 20px;
+      background-color: $secondary;
+      color: $primary;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
 
-  //       &:hover {
-  //         background-color: #2233f0;
-  //         scale: 1.1;
-  //       }
-  //     }
-  //   }
+      &:hover {
+        background-color: #2233f0;
+        scale: 1.1;
+      }
+    }
+  }
 }
 
-// @media screen and (max-width: 700px) {
-//   .container {
-//     .contact-form {
-//       width: 400px;
-//     }
-//   }
-// }
+@media screen and (max-width: 700px) {
+  .container {
+    .contact-form {
+      width: 400px;
+    }
+  }
+}
 
 @media screen and (max-width: 500px) {
   .container {
-    // .contact-form {
-    //   width: 200px;
-    // }
+    .contact-form {
+      width: 200px;
+    }
 
     div {
       padding: 10px;
-      //   background-color: $background;
-      //   padding: 0px;
-      //   border-radius: 0px;
-      //   box-shadow: 0 0 0 0;
+      background-color: $background;
+      padding: 0px;
+      border-radius: 0px;
+      box-shadow: 0 0 0 0;
       ul {
         li {
           h3 {
