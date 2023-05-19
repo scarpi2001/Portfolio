@@ -1,8 +1,13 @@
 <script>
+import axios from "axios";
 export default {
   name: "Contacts",
   data() {
     return {
+      form: {
+        email: "",
+        message: "",
+      },
       links: [
         {
           text: "Email : ",
@@ -27,6 +32,35 @@ export default {
       ],
     };
   },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit() {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" },
+      };
+      axios
+        .post(
+          "/",
+          this.encode({
+            "form-name": "contacts",
+            ...this.form,
+          }),
+          axiosConfig
+        )
+        .then(() => {
+          this.$router.push("success");
+        })
+        .catch(() => {
+          this.$router.push("404");
+        });
+    },
+  },
 };
 </script>
 
@@ -49,11 +83,11 @@ export default {
       <div class="card">
         <form
           class="contact-form"
-          action="/success"
           name="contacts"
           method="POST"
           netlify
           netlify-honeypot="bot-field"
+          @submit.prevent="handleSubmit"
         >
           <input type="hidden" name="form-name" value="contacts" />
           <label for="email">Email</label>
@@ -62,6 +96,7 @@ export default {
             id="email"
             name="email"
             placeholder="Inserisci la tua email"
+            v-model="form.email"
             required
           />
 
@@ -70,6 +105,7 @@ export default {
             id="message"
             name="message"
             placeholder="Scrivi il tuo messaggio"
+            v-model="form.message"
             required
           ></textarea>
 
