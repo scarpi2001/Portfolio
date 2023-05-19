@@ -5,10 +5,33 @@ export default {
 </script>
 
 <template>
-  <div>
-    <h1>Grazie per avermi contattato, ti risponderò il prima possibile</h1>
-    <router-link to="/contacts">
-      <button>Back to form</button>
-    </router-link>
+  <div class="container">
+    <div class="card">
+      <h1>
+        Grazie per avermi contattato,<br />ti risponderò il prima possibile
+      </h1>
+      <router-link to="/contacts">
+        <button>Back to form</button>
+      </router-link>
+    </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@use "../../style/general" as *;
+@use "../../style/partials/variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 180px);
+  text-align: center;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+</style>

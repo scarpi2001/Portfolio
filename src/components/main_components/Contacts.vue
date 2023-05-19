@@ -49,7 +49,7 @@ export default {
       <div class="card">
         <form
           class="contact-form"
-          action="/thanks"
+          action="/success"
           name="contacts"
           method="POST"
           netlify
@@ -93,8 +93,6 @@ export default {
   text-align: center;
 
   div {
-    padding: 20px;
-
     h1 {
       color: $secondary;
       margin-bottom: 10px;
@@ -137,21 +135,6 @@ export default {
       border-radius: 4px;
       margin-bottom: 10px;
     }
-
-    button {
-      padding: 10px 20px;
-      background-color: $secondary;
-      color: $primary;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.2s;
-
-      &:hover {
-        background-color: #2233f0;
-        scale: 1.1;
-      }
-    }
   }
 }
 
@@ -167,14 +150,20 @@ export default {
   .container {
     .contact-form {
       width: 200px;
+
+      label {
+        font-size: 18px;
+      }
+
+      input,
+      textarea {
+        padding: 6px;
+      }
     }
 
     div {
-      padding: 10px;
-      background-color: $background;
-      padding: 0px;
-      border-radius: 0px;
-      box-shadow: 0 0 0 0;
+      padding: 15px;
+
       ul {
         li {
           h3 {
@@ -182,7 +171,7 @@ export default {
           }
 
           a {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
       }
