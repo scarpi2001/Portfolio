@@ -1,6 +1,10 @@
 <script>
+import Anchor from "./Anchor.vue";
 export default {
   name: "Projects",
+  components: {
+    Anchor,
+  },
   data() {
     return {
       projects: [
@@ -135,35 +139,35 @@ export default {
           livePrev: "https://scarpi2001.github.io/js-campominato-dom/",
           gitHub: "https://github.com/scarpi2001/js-campominato-dom",
         },
-        {
-          img: "/personal.png",
-          title: "AvadaSEO",
-          skills: [
-            {
-              name: "html",
-              img: "/html.svg",
-            },
-            {
-              name: "css",
-              img: "/css-icon.svg",
-            },
-            {
-              name: "sass",
-              img: "/sass-icon.svg",
-            },
-            {
-              name: "js",
-              img: "/js-icon.svg",
-            },
-            {
-              name: "vue",
-              img: "/vue-icon.svg",
-            },
-          ],
-          description: "Home page di un sito creata con Vue3",
-          livePrev: "https://scarpi2001.github.io/proj-html-vuejs/",
-          gitHub: "https://github.com/scarpi2001/proj-html-vuejs",
-        },
+        // {
+        //   img: "/personal.png",
+        //   title: "AvadaSEO",
+        //   skills: [
+        //     {
+        //       name: "html",
+        //       img: "/html.svg",
+        //     },
+        //     {
+        //       name: "css",
+        //       img: "/css-icon.svg",
+        //     },
+        //     {
+        //       name: "sass",
+        //       img: "/sass-icon.svg",
+        //     },
+        //     {
+        //       name: "js",
+        //       img: "/js-icon.svg",
+        //     },
+        //     {
+        //       name: "vue",
+        //       img: "/vue-icon.svg",
+        //     },
+        //   ],
+        //   description: "Home page di un sito creata con Vue3",
+        //   livePrev: "https://scarpi2001.github.io/proj-html-vuejs/",
+        //   gitHub: "https://github.com/scarpi2001/proj-html-vuejs",
+        // },
         {
           img: "/dropbox.png",
           title: "Dropbox",
@@ -212,10 +216,12 @@ export default {
       <!-- card -->
       <div class="card" v-for="project in projects">
         <!-- img -->
-        <img class="project_img" :src="project.img" :alt="project.title" />
+        <a :href="project.livePrev" target="_blank">
+          <img class="project_img" :src="project.img" :alt="project.title" />
+        </a>
         <!-- titolo -->
         <h2>
-          <a :href="project.livePrev">{{ project.title }}</a>
+          <a :href="project.livePrev" target="_blank">{{ project.title }}</a>
         </h2>
         <!-- skills -->
         <ul>
@@ -228,14 +234,16 @@ export default {
         <!-- links -->
         <div>
           <h3>
-            <a :href="project.livePrev">Live Preview</a>
+            <a :href="project.livePrev" target="_blank">Live Preview</a>
           </h3>
           <h3>
-            <a :href="project.gitHub">GitHub</a>
+            <a :href="project.gitHub" target="_blank">GitHub</a>
           </h3>
         </div>
       </div>
     </div>
+    <!-- anchor top -->
+    <Anchor />
   </div>
 </template>
 
@@ -293,6 +301,36 @@ export default {
       }
     }
   }
+
+  #top-anchor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 120px;
+    right: 60px;
+    background-color: $secondary;
+    color: $primary;
+    cursor: pointer;
+    animation: fadeIn 1s ease forwards;
+
+    &:hover {
+      animation: bounce 0.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  }
 }
 
 //md version
@@ -314,6 +352,13 @@ export default {
         width: 100%;
         height: 500px;
       }
+    }
+
+    #top-anchor {
+      width: 40px;
+      height: 40px;
+      bottom: 100px;
+      right: 30px;
     }
   }
 }

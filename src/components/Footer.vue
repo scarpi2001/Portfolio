@@ -28,7 +28,7 @@ export default {
       <div class="contacts_box">
         <ul>
           <li v-for="(contact, index) in contacts" :key="index">
-            <a :href="contact.link">
+            <a :href="contact.link" target="_blank">
               <font-awesome-icon :icon="contact.icon" />
             </a>
           </li>

@@ -1,6 +1,11 @@
 <script>
+import Anchor from "./Anchor.vue";
+
 export default {
   name: "About",
+  components: {
+    Anchor,
+  },
   data() {
     return {
       frontSkills: [
@@ -64,9 +69,7 @@ export default {
       Il mio obiettivo è continuare a crescere come sviluppatore e contribuire
       alla realizzazione e al mantenimento di progetti innovativi.
     </p>
-  </div>
 
-  <div class="container">
     <h1>Teconologie Frontend</h1>
 
     <div class="cards_box">
@@ -82,6 +85,8 @@ export default {
         <img :src="backSkill.img" :alt="backSkill.name" />
       </div>
     </div>
+    <!-- anchor top -->
+    <Anchor />
   </div>
 </template>
 
@@ -105,6 +110,7 @@ export default {
 
   p {
     font-size: 22px;
+    margin-bottom: 40px;
   }
 
   .cards_box {
