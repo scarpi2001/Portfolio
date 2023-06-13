@@ -16,8 +16,8 @@ export default {
     handleScroll() {
       const scrollPosition = window.scrollY;
 
-      // Verifica se si ha scrollato più di 500
-      this.isScrolled = scrollPosition >= 500;
+      // Verifica se si ha scrollato più di un tot
+      this.isScrolled = scrollPosition >= 250;
     },
     scrollToTop() {
       const startPosition = window.scrollY;
