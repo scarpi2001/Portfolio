@@ -125,7 +125,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100dvh - 180px);
+  height: calc(100vh - 180px);
   text-align: center;
 
   div {
