@@ -32,7 +32,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100vh - 180px);
+  height: calc(100dvh - 180px);
   gap: 50px;
 
   h1 {
