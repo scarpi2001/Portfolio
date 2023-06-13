@@ -3,7 +3,7 @@ export default {
   name: "Anchor",
   data() {
     return {
-      isAtBottom: false,
+      isScrolled: false,
     };
   },
   mounted() {
@@ -14,16 +14,13 @@ export default {
   },
   methods: {
     handleScroll() {
-      const container = document.querySelector(".container");
-      const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
-      const containerHeight = container.offsetHeight;
 
-      // Verifica se si è in fondo alla pagina
-      this.isAtBottom = windowHeight + scrollPosition >= containerHeight;
+      // Verifica se si ha scrollato più di 500
+      this.isScrolled = scrollPosition >= 500;
     },
     scrollToTop() {
-      const startPosition = window.pageYOffset;
+      const startPosition = window.scrollY;
       const duration = 500; // Durata dell'animazione in millisecondi
       const startTime = performance.now();
 
@@ -51,7 +48,7 @@ export default {
 </script>
 
 <template>
-  <a class="top_anchor" v-show="isAtBottom" @click="scrollToTop"
+  <a class="top_anchor" v-show="isScrolled" @click="scrollToTop"
     ><font-awesome-icon :icon="['fas', 'angle-up']"
   /></a>
 </template>
