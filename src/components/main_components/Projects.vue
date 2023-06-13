@@ -260,7 +260,7 @@ export default {
       flex-direction: column;
       justify-content: space-between;
       width: calc(100% / 3 - 50px);
-      height: 450px;
+      height: 480px;
       padding: 0;
 
       .project_img {
@@ -345,7 +345,7 @@ export default {
 }
 
 //s version
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .container {
     .cards_box {
       .card {

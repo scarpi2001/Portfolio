@@ -131,7 +131,7 @@ export default {
   div {
     h1 {
       color: $secondary;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     ul {
@@ -150,12 +150,11 @@ export default {
   }
 
   #contacts {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .contact-form {
     width: 600px;
-
     label {
       display: block;
       text-align: left;
