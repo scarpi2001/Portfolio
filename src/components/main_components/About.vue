@@ -102,7 +102,7 @@ export default {
       </div>
     </div>
 
-    <h1>Teconologie Backend</h1>
+    <h1>Tecnologie Backend</h1>
 
     <div class="cards_box">
       <div class="card" v-for="backSkill in backSkills">

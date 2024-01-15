@@ -213,4 +213,18 @@ export default {
     }
   }
 }
+
+@media screen and (max-height: 760px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-height: 760px) and (max-width: 500px) {
+  .container {
+    overflow-x: auto;
+  }
+}
 </style>
