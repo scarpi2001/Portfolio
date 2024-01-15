@@ -8,6 +8,7 @@ export default {
   },
   data() {
     return {
+      birthdate: "2001-11-29",
       frontSkills: [
         {
           name: "html",
@@ -51,8 +52,28 @@ export default {
           name: "laravel",
           img: "/laravel-icon.svg",
         },
+        {
+          name: "ASP.NET",
+          img: "/aspnet-svgrepo-com.svg",
+        },
+        {
+          name: "Python",
+          img: "/python-svgrepo-com.svg",
+        },
       ],
     };
+  },
+  computed: {
+    age() {
+      const today = new Date();
+      const birthDate = new Date(this.birthdate);
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      return age;
+    },
   },
 };
 </script>
@@ -61,16 +82,19 @@ export default {
   <div class="container">
     <h1>About Me</h1>
     <p class="card">
-      Mi chiamo Marco Scarpelli ed ho 21 anni.<br />
-      Fin da quando ero bambino sono sempre stato uno smanettone appassionato di
-      informatica,<br />
+      Mi chiamo Marco Scarpelli ed ho {{ age }} anni.<br />
+      l'informatica mi appassiona da quando ero bambino,<br />
       Mi piace programmare, rimanere sempre aggiornato su nuove tecnologie e
       mettermi costantemente alla prova,<br />
       Il mio obiettivo è continuare a crescere come sviluppatore e contribuire
-      alla realizzazione e al mantenimento di progetti innovativi.
+      alla realizzazione e al mantenimento di progetti interessanti e
+      innovativi. <br />
+      Attualmente ricopro la posizione di web developer per
+      <a href="https://www.codiceclick.it/">CodiceClick</a>, <br />
+      e sono studente di informatica all'università La Sapienza
     </p>
 
-    <h1>Teconologie Frontend</h1>
+    <h1>Tecnologie Frontend</h1>
 
     <div class="cards_box">
       <div class="skill card" v-for="frontSkill in frontSkills">
