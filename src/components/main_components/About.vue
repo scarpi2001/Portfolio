@@ -91,7 +91,7 @@ export default {
       innovativi. <br />
       Attualmente ricopro la posizione di web developer per
       <a href="https://www.codiceclick.it/">CodiceClick</a>, <br />
-      e sono studente di informatica all'università La Sapienza
+      e sono studente di informatica all'università "La Sapienza" di Roma
     </p>
 
     <h1>Tecnologie Frontend</h1>
