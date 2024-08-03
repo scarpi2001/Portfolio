@@ -13,7 +13,9 @@ export default {
   <div class="container">
     <a href="/cv.pdf" class="cv_button" target="_blank"> Scarica il mio CV </a>
 
-    <img src="/cv.png" alt="CV" />
+    <div class="image-container">
+      <img src="/cv.png" alt="CV" />
+    </div>
 
     <a href="/cv.pdf" class="cv_button" target="_blank"> Scarica il mio CV </a>
     <!-- anchor top -->
@@ -32,9 +34,14 @@ export default {
   gap: 60px;
   padding: 80px 0;
 
-  img {
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  .image-container {
+    max-width: 950px;
+
+    img {
+      border-radius: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
   }
 
   .cv_button {

@@ -45,10 +45,6 @@ export default {
           img: "/php-icon.svg",
         },
         {
-          name: "mysql",
-          img: "/mysql-icon.svg",
-        },
-        {
           name: "laravel",
           img: "/laravel-icon.svg",
         },
@@ -57,8 +53,20 @@ export default {
           img: "/aspnet-svgrepo-com.svg",
         },
         {
+          name: "VB.NET",
+          img: "/VB.NET_Logo.svg",
+        },
+        {
           name: "Python",
           img: "/python-svgrepo-com.svg",
+        },
+        {
+          name: "Java",
+          img: "/java-icon.svg",
+        },
+        {
+          name: "mysql",
+          img: "/mysql-icon.svg",
         },
       ],
     };
@@ -83,14 +91,16 @@ export default {
     <h1>About Me</h1>
     <p class="card">
       Mi chiamo Marco Scarpelli ed ho {{ age }} anni.<br />
-      l'informatica mi appassiona da quando ero bambino,<br />
-      Mi piace programmare, rimanere sempre aggiornato su nuove tecnologie e
-      mettermi costantemente alla prova,<br />
-      Il mio obiettivo è continuare a crescere come sviluppatore e contribuire
-      alla realizzazione e al mantenimento di progetti interessanti e
-      innovativi. <br />
-      Attualmente ricopro la posizione di web developer per
-      <a href="https://www.codiceclick.it/">CodiceClick</a>, <br />
+      Sono da sempre un appassionato di informatica,<br />
+      amo programmare, restare aggiornato sulle ultime novità del mondo tech<br />
+      e mettermi continuamente alla prova.
+      <br /><br />
+      Il mio obiettivo è crescere come sviluppatore<br />
+      e contribuire alla creazione e manutenzione di progetti innovativi e
+      stimolanti.
+      <br /><br />
+      Attualmente lavoro come web developer per
+      <a href="https://www.codiceclick.it/">CodiceClick</a>,<br />
       e sono studente di informatica all'università "La Sapienza" di Roma
     </p>
 
@@ -133,8 +143,13 @@ export default {
   }
 
   p {
+    text-align: left;
     font-size: 22px;
     margin-bottom: 40px;
+
+    a {
+      color: $secondary;
+    }
   }
 
   .cards_box {
