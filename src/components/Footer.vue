@@ -36,7 +36,7 @@ export default {
       </div>
 
       <h4>
-        <span>Copyright © 2023</span>
+        <span>Copyright © 2024</span>
         <span id="copyright_2nd">- All rights reserved</span>
       </h4>
     </nav>

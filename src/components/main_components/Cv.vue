@@ -14,7 +14,7 @@ export default {
     <a href="/cv.pdf" class="cv_button" target="_blank"> Scarica il mio CV </a>
 
     <div class="image-container">
-      <img src="/cv.png" alt="CV" />
+      <img src="/cv.jpg" alt="CV" />
     </div>
 
     <a href="/cv.pdf" class="cv_button" target="_blank"> Scarica il mio CV </a>

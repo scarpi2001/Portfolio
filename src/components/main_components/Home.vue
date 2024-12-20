@@ -30,13 +30,14 @@ export default {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: calc(100vh - 180px);
   gap: 50px;
 
   h1 {
-    font-size: 60px;
+    font-size: 50px;
     color: $secondary;
   }
 
